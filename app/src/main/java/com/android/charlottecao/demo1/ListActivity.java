@@ -1,5 +1,7 @@
 package com.android.charlottecao.demo1;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +36,11 @@ public class ListActivity extends AppCompatActivity {
             int index = random.nextInt(fruits.length);
             mFruitList.add(fruits[index]);
         }
+    }
+
+    public static void actionStart(Context context) {
+        Intent intent = new Intent(context, ListActivity.class);
+        context.startActivity(intent);
     }
 
     @Override
